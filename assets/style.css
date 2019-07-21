@@ -1,0 +1,36 @@
+body{
+    background-image: url(../assets/images/background.png);
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.map-card{
+    max-width: 100%;
+   
+}
+
+
+form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.form-group {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+.img-credit {
+    font-size: 50%;
+}
+
+.text-muted {
+    padding: 0;
+    font-size: 60%;
+}
