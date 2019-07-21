@@ -1,8 +1,22 @@
 body{
-    background-image: url(../assets/images/background.png);
+    background-image: url(../assets/images/background02.png);
 }
 
 .jumbotron {
+    text-align: center;
+    color: white;
+    background-image: url(../assets/images/jumbotron-background-cropped.png);
+    width: 85%;
+    padding-bottom: 20%;
+    margin: 2% auto 2.5% auto;
+}
+
+.title-text {
+    background-color: rgba(1, 180, 96, 0.5);
+    margin: -5% 15% 30% 15%;
+}
+
+#engines {
     text-align: center;
 }
 
@@ -13,15 +27,21 @@ body{
 
 
 form {
-    margin: 0;
-    padding: 0;
+
     width: 100%;
 }
 
 .form-group {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 10%;
+    font-size: 160%;
+    text-align: center;
+
     width: 100%;
+}
+
+.submit-btn {
+    margin-top: 0%;
+    margin-left: 40%;
 }
 
 
