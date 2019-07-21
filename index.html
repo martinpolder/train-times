@@ -31,8 +31,8 @@
                     <!-- ADD LINK  -->
                     <img src="assets/images/map.png" class="card-img-top map-img" alt="Subway style map of the Island of Sodor">
                     <div class="card-body">
-                        <p class="card-text">Map of Sodor</p>
-                        <p class="text-muted">click to open a larger im age in a new window</p>
+                        <p class="card-text">Map of Sodor <span class="text-muted">click to open a larger im age in a new window</span></p>
+                        <!-- <p class="text-muted">click to open a larger im age in a new window</p> -->
                         <hr>
                         <!-- Image Credit -->
                         <p class="card-text img-credit">By The original uploader was <a
@@ -57,23 +57,20 @@
             <div class="col-lg-4 column2">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                            else.</small>
+                        <label for="train-name">Train Name</label>
+                        <input type="train-name" class="form-control" id="train-input">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="destination">Destination</label>
+                        <input type="destination" class="form-control" id="destination-input">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="train-time">First Train Time (HH:mm - military time)</label>
+                        <input type="train-time" class="form-control" id="train-time-input">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="frequency">Frequency (minutes)</label>
+                        <input type="frequency" class="form-control" id="frequency-input">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
