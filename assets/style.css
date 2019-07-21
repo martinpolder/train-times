@@ -1,5 +1,8 @@
 body{
-    background-image: url(../assets/images/background02.png);
+    background-image: url(../assets/images/background03.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 .jumbotron {
@@ -27,6 +30,7 @@ body{
 
 
 form {
+    color: white;
 
     width: 100%;
 }
