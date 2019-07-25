@@ -42,33 +42,26 @@ $(".submit-btn").on("click", function(event) {
 
   // Clears all of the text-boxes
   $("#train-input").val("");
-  $("#role-input").val("");
-  $("#start-input").val("");
-  $("#rate-input").val("");
+  $("#destination-input").val("");
+  $("#train-time-input").val("");
+  $("#frequency-input").val("");
 });
 
 
 database.ref().on("child_added", function(childSnapshot) {
   console.log(childSnapshot.val());
 
-  var empName = childSnapshot.val().name;
-  var empRole = childSnapshot.val().role;
-  var empStart = childSnapshot.val().start;
-  var empRate = childSnapshot.val().rate;
+  var trainName = childSnapshot.val().name;
+  var trainDest = childSnapshot.val().role;
+  var trainTime = childSnapshot.val().start;
+  var freq = childSnapshot.val().rate;
 
-  console.log(empName);
-  console.log(empRole);
-  console.log(empStart);
-  console.log(empRate);
+  console.log(trainName);
+  console.log(trainDest);
+  console.log(trainTime);
+  console.log(freq);
 
-  var empStartPretty = moment.unix(empStart).format("MM/DD/YYYY");
-
-
-  var empMonths = moment().diff(moment(empStart, "X"), "months");
-  console.log(empMonths);
-
-  var empBilled = empMonths * empRate;
-  console.log(empBilled);
+// Do the  math :()
 
   var newRow = $("<tr>").append(
     $("<td>").text(empName),
@@ -79,5 +72,5 @@ database.ref().on("child_added", function(childSnapshot) {
     $("<td>").text(empBilled)
   );
 
-  $("#employee-table > tbody").append(newRow);
+  $("#train-sched > tbody").append(newRow);
 });
