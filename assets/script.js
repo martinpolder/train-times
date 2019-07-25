@@ -36,7 +36,7 @@ $(".submit-btn").on("click", function(event) {
   console.log(newTrain.name);
   console.log(newTrain.destination);
   console.log(newTrain.start);
-  console.log(newTrain.frequency);
+  console.log(newTrain.freq);
 
   alert("Choo Choo!");
 
@@ -52,9 +52,9 @@ database.ref().on("child_added", function(childSnapshot) {
   console.log(childSnapshot.val());
 
   var trainName = childSnapshot.val().name;
-  var trainDest = childSnapshot.val().role;
-  var trainTime = childSnapshot.val().start;
-  var freq = childSnapshot.val().rate;
+  var trainDest = childSnapshot.val().destination;
+  var trainTime = childSnapshot.val().trainTime;
+  var freq = childSnapshot.val().freq;
 
   console.log(trainName);
   console.log(trainDest);
@@ -64,12 +64,12 @@ database.ref().on("child_added", function(childSnapshot) {
 // Do the  math :()
 
   var newRow = $("<tr>").append(
-    $("<td>").text(empName),
-    $("<td>").text(empRole),
-    $("<td>").text(empStartPretty),
-    $("<td>").text(empMonths),
-    $("<td>").text(empRate),
-    $("<td>").text(empBilled)
+    $("<td>").text(trainName),
+    $("<td>").text(trainDest),
+    $("<td>").text(trainTime),
+    $("<td>").text(freq),
+    // $("<td>").text(),
+    // $("<td>").text()
   );
 
   $("#train-sched > tbody").append(newRow);
